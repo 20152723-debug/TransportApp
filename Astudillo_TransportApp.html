@@ -1,0 +1,873 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Page information -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Riders - Transportation App</title>
+    <img
+    src="Riders.png"
+    alt="Riders"
+    width="400"
+    height="250">
+</head>
+
+<body id="top">
+
+    <!-- =========================
+         HEADER AND NAVIGATION
+         ========================= -->
+    <header>
+
+        <h1>Riders</h1>
+
+        <p>
+            <em>Safe, Simple, Very Quick, and Reliable Transportation</em>
+        </p>
+
+        <br>
+
+        <!-- Navigation links -->
+        <nav>
+            <a href="#book">Book a Ride</a> |
+            <a href="#fleet">Our Vehicles</a> |
+            <a href="#map">Map</a> |
+            <a href="#media">Media</a> |
+            <a href="#schedule">Schedule</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <br>
+        <hr>
+
+    </header>
+
+
+    <!-- =========================
+         MAIN CONTENT
+         ========================= -->
+    <main>
+
+
+        <!-- =========================
+             BOOKING FORM
+             ========================= -->
+        <section id="book">
+
+            <h2>Book a Ride</h2>
+
+            <form action="#" method="post">
+
+                <fieldset>
+
+                    <legend>Trip Details</legend>
+
+                    <!-- Full name -->
+                    <p>
+                        <label for="fullname">Full Name:</label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="fullname"
+                            name="fullname"
+                            placeholder="Enter your full name"
+                            required>
+                    </p>
+
+                    <!-- Phone number -->
+                    <p>
+                        <label for="phone">Phone Number:</label>
+                        <br>
+
+                        <input
+                            type="tel"
+                            id="phone"
+                            name="phone"
+                            placeholder="09XXXXXXXXX"
+                            required>
+                    </p>
+
+                    <!-- Email -->
+                    <p>
+                        <label for="email">Email:</label>
+                        <br>
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="example@email.com">
+                    </p>
+
+                    <!-- Pick-up location -->
+                    <p>
+                        <label for="pickup">Pick-up Location:</label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="pickup"
+                            name="pickup"
+                            list="places"
+                            placeholder="Choose pick-up location">
+                    </p>
+
+                    <!-- Drop-off location -->
+                    <p>
+                        <label for="dropoff">Drop-off Location:</label>
+                        <br>
+
+                        <input
+                            type="text"
+                            id="dropoff"
+                            name="dropoff"
+                            list="places"
+                            placeholder="Choose drop-off location">
+                    </p>
+
+                    <!-- Location suggestions -->
+                    <datalist id="places">
+                        <option value="Central Terminal">
+                        <option value="City Hall">
+                        <option value="Airport">
+                        <option value="University Campus">
+                        <option value="Public Market">
+                    </datalist>
+
+                    <!-- Date -->
+                    <p>
+                        <label for="date">Date:</label>
+                        <br>
+
+                        <input
+                            type="date"
+                            id="date"
+                            name="date"
+                            required>
+                    </p>
+
+                    <!-- Time -->
+                    <p>
+                        <label for="time">Time:</label>
+                        <br>
+
+                        <input
+                            type="time"
+                            id="time"
+                            name="time"
+                            required>
+                    </p>
+
+                    <!-- Number of passengers -->
+                    <p>
+                        <label for="passengers">Passengers:</label>
+                        <br>
+
+                        <input
+                            type="number"
+                            id="passengers"
+                            name="passengers"
+                            min="1"
+                            max="10"
+                            value="1">
+                    </p>
+
+                    <!-- Vehicle selection -->
+                    <p>
+                        <label for="vehicle">Vehicle Type:</label>
+                        <br>
+
+                        <select id="vehicle" name="vehicle">
+                            <option value="F 16">Airplane</option>
+                            <option value="Mcqueen">Talking Car</option>
+                            <option value="shuttle">Shuttle Bus</option>
+                        </select>
+                    </p>
+
+                    <!-- Payment method -->
+                    <p>
+                        <strong>Payment Method:</strong>
+                    </p>
+
+                    <p>
+                        <input
+                            type="radio"
+                            id="cash"
+                            name="payment"
+                            value="cash"
+                            checked>
+
+                        <label for="cash">Cash</label>
+
+                        <br>
+
+                        <input
+                            type="radio"
+                            id="card"
+                            name="payment"
+                            value="card">
+
+                        <label for="card">Card</label>
+
+                        <br>
+
+                        <input
+                            type="radio"
+                            id="maribank"
+                            name="payment"
+                            value="maribank">
+
+                        <label for="maribak">Maribank</label>
+                    </p>
+
+                    <!-- Extra services -->
+                    <p>
+                        <strong>Extras:</strong>
+                    </p>
+
+                    <p>
+                        <input
+                            type="checkbox"
+                            id="luggage"
+                            name="extras"
+                            value="extra-luggage">
+
+                        <label for="luggage">Extra luggage</label>
+
+                        <br>
+
+                        <input
+                            type="checkbox"
+                            id="childseat"
+                            name="extras"
+                            value="child-seat">
+
+                        <label for="childseat">Child seat</label>
+
+                        <br>
+                    </p>
+
+                    <!-- Driver notes -->
+                    <p>
+                        <label for="notes">
+                            Notes for the Driver:
+                        </label>
+
+                        <br>
+
+                        <textarea
+                            id="notes"
+                            name="notes"
+                            rows="5"
+                            cols="40"
+                            placeholder="Enter any special instructions"></textarea>
+                    </p>
+
+                    <!-- Terms and conditions -->
+                    <p>
+                        <input
+                            type="checkbox"
+                            id="terms"
+                            name="terms"
+                            required>
+
+                        <label for="terms">
+                            I agree to the
+                            <a href="#terms-info">
+                                Terms &amp; Conditions
+                            </a>
+                        </label>
+                    </p>
+
+                    <!-- Form buttons -->
+                    <p>
+                        <button type="submit">
+                            Book Now
+                        </button>
+
+                        <button type="reset">
+                            Clear
+                        </button>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+            <br>
+            <hr>
+
+        </section>
+
+
+        <!-- =========================
+             VEHICLE IMAGES
+             ========================= -->
+        <section id="fleet">
+
+            <h2>Our Vehicles</h2>
+
+            <!-- F 16 -->
+            <figure>
+
+                <img
+                    src="F 16.jpg"
+                    alt="Riders F 16"
+                    width="400"
+                    height="250">
+
+                <figcaption>
+                    <strong>F 16</strong> -
+                    Very fast transportation for individuals or by pair
+                </figcaption>
+
+            </figure>
+
+            <br>
+
+            <!-- Mcqueen -->
+            <figure>
+
+                <img
+                    src="Mcqueen.jpg"
+                    alt="Riders Mcqueen"
+                    width="400"
+                    height="250">
+
+                <figcaption>
+                    <strong>Mcqueen</strong> -
+                    For individuals who don't want to be bored at rides
+                </figcaption>
+
+            </figure>
+
+            <br>
+
+            <!-- Shuttle bus -->
+            <figure>
+
+                <img
+                    src="Bus.jpg"
+                    alt="Rides Shuttle Bus"
+                    width="400"
+                    height="250">
+
+                <figcaption>
+                    <strong>Shuttle Bus</strong> -
+                    Convenient transportation for many passengers.
+                </figcaption>
+
+            </figure>
+
+            <br>
+            <br><br>
+            <hr>
+
+        </section>
+
+
+        <!-- =========================
+             MAP SECTION
+             ========================= -->
+        <section id="map">
+
+            <h2>Find Our Stops</h2>
+
+            <p>
+                Use the map below to find Riders transportation locations in Alberta, Canada.
+            </p>
+
+            <br>
+
+            <!-- OpenStreetMap -->
+            <iframe
+                title="Google Maps - Alberta, Canada"
+                width="600"
+                height="400"
+                src="Vancouver.png"
+                src="https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2578182,-123.206304,12z">
+            </iframe>
+
+            <br><br>
+
+            <!-- Larger map link -->
+            <a
+                href="https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2578182,-123.206304,12z"
+                target="_blank"
+                rel="noopener">
+                View Vancouver, Canada
+            </a>
+
+            <br><br>
+
+            <h3>Image Map: Route Overview</h3>
+
+            <!-- Route image -->
+            <img
+                src="Overview.png"
+                alt="Route showing Terminal, City Hall, and Airport"
+                width="600"
+                height="200"
+                usemap="#routemap">
+
+            <!-- Clickable image map -->
+            <map name="routemap">
+
+                <area
+                    shape="rect"
+                    coords="0,0,200,200"
+                    href="#schedule"
+                    alt="Central Terminal">
+
+                <area
+                    shape="rect"
+                    coords="200,0,400,200"
+                    href="#schedule"
+                    alt="City Hall">
+
+                <area
+                    shape="rect"
+                    coords="400,0,600,200"
+                    href="#schedule"
+                    alt="Airport">
+
+            </map>
+
+            <br><br>
+            <hr>
+
+        </section>
+
+
+        <!-- =========================
+             VIDEO AND AUDIO
+             ========================= -->
+        <section id="media">
+
+            <h2>Media</h2>
+
+            <!-- Video -->
+            <h3>How Riders Works (Video)</h3>
+
+            <video
+                width="480"
+                controls
+                poster="Ad.mp4">
+
+                <source
+                    src="Ad.mp4"
+                    type="video/mp4">
+
+                <source
+                    src="Ad.mp4"
+                    type="video/ogg">
+            </video>
+
+            <br><br>
+
+            <!-- Audio -->
+            <h3>Driver Announcement (Audio)</h3>
+
+            <audio controls>
+
+                <source
+                    src="driver_app_ad_5_seconds.mp3"
+                    type="audio/mpeg">
+
+                <source
+                    src="driver_app_ad_5_seconds.mp3"
+                    type="audio/ogg">
+            </audio>
+
+            <br><br>
+
+            <!-- YouTube video -->
+            <h3>Watch on YouTube (Embedded)</h3>
+
+            <iframe
+                width="560"
+                height="315"
+                src="GrabCar ka na ulit!.mp4"
+                title="Riders Transportation Video"
+                allowfullscreen>
+            </iframe>
+
+            <br><br>
+            <hr>
+
+        </section>
+
+
+        <!-- =========================
+             SHUTTLE SCHEDULE
+             ========================= -->
+        <section id="schedule">
+
+            <h2>Shuttle Schedule</h2>
+
+            <!-- Schedule table -->
+            <table border="1" cellpadding="6" cellspacing="0">
+
+                <caption>
+                    Daily departures from Central Terminal
+                </caption>
+
+                <thead>
+
+                    <tr>
+                        <th>Route</th>
+                        <th>Departure</th>
+                        <th>Arrival</th>
+                        <th>Fare</th>
+                    </tr>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Terminal to Vancouver</td>
+                        <td>8:00 AM</td>
+                        <td>9:20 AM</td>
+                        <td>$500</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Calgary</td>
+                        <td>9:00 AM</td>
+                        <td>10:30 AM</td>
+                        <td>$300</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Saskatchewan</td>
+                        <td>10:00 AM</td>
+                        <td>14:40 AM</td>
+                        <td>$700</td>
+                    </tr>
+
+                    <tr>
+                        <td>Terminal to Edmonton</td>
+                        <td>11:00 AM</td>
+                        <td>13:20 AM</td>
+                        <td>$100</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+            <br><br>
+
+            <!-- Route search form -->
+            <h3>Check Your Route</h3>
+
+            <form method="get" action="#">
+
+                <p>
+                    <label for="route">
+                        Select Route:
+                    </label>
+
+                    <br>
+
+                    <select id="route" name="route">
+
+                        <option value="vancouver">
+                            Terminal to Vancouver
+                        </option>
+
+                        <option value="calgary">
+                            Terminal to Calgary
+                        </option>
+
+                        <option value="saskatchewan">
+                            Terminal to Saskatchewan
+                        </option>
+
+                        <option value="edmonton">
+                            Terminal to Edmonton
+                        </option>
+
+                    </select>
+
+                    <button type="submit">
+                        Search
+                    </button>
+                </p>
+
+            </form>
+
+            <br>
+            <hr>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT AND FEEDBACK
+             ========================= -->
+        <section id="contact">
+
+            <h2>Contact &amp; Feedback</h2>
+
+            <form
+                action="#"
+                method="post"
+                enctype="multipart/form-data">
+
+                <fieldset>
+
+                    <legend>Send Feedback</legend>
+
+                    <!-- Name -->
+                    <p>
+                        <label for="feedback-name">
+                            Your Name:
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="text"
+                            id="feedback-name"
+                            name="feedback-name"
+                            required>
+                    </p>
+
+                    <!-- Rating -->
+                    <p>
+                        <label for="rating">
+                            Rate Your Ride (1-5):
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="range"
+                            id="rating"
+                            name="rating"
+                            min="1"
+                            max="5"
+                            value="5">
+                    </p>
+
+                    <!-- Feedback topic -->
+                    <p>
+                        <label for="topic">
+                            Topic:
+                        </label>
+
+                        <br>
+
+                        <select id="topic" name="topic">
+
+                            <option value="compliment">
+                                Compliment
+                            </option>
+
+                            <option value="complaint">
+                                Complaint
+                            </option>
+
+                            <option value="lost-item">
+                                Lost item
+                            </option>
+
+                            <option value="suggestion">
+                                Suggestion
+                            </option>
+
+                        </select>
+                    </p>
+
+                    <!-- Message -->
+                    <p>
+                        <label for="message">
+                            Message:
+                        </label>
+
+                        <br>
+
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="6"
+                            cols="50"
+                            required
+                            placeholder="Write your feedback here"></textarea>
+                    </p>
+
+                    <!-- File upload -->
+                    <p>
+                        <label for="photo">
+                            Attach a Photo (optional):
+                        </label>
+
+                        <br>
+
+                        <input
+                            type="file"
+                            id="photo"
+                            name="photo"
+                            accept="image/*">
+                    </p>
+
+                    <!-- Submit feedback -->
+                    <p>
+                        <button type="submit">
+                            Send Feedback
+                        </button>
+                    </p>
+
+                </fieldset>
+
+            </form>
+
+            <br>
+
+            <!-- Contact information -->
+            <h3>Reach Us</h3>
+
+            <address>
+
+                Riders Transportation Services
+                <br>
+
+                Vancouver, Canada
+                <br>
+
+                Phone:
+                <a href="tel:+639123456789">
+                    +63 912 345 6789
+                </a>
+
+                <br>
+
+                Email:
+                <a href="mailto:Riders@example.com">
+                    Riders@example.com
+                </a>
+
+            </address>
+
+            <br>
+            <hr>
+
+        </section>
+
+
+        <!-- =========================
+             USEFUL LINKS
+             ========================= -->
+        <section id="links">
+
+            <h2>Useful Links</h2>
+
+            <ul>
+
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2578182,-123.206304,12z"
+                        target="_blank"
+                        rel="noopener">
+                        OpenStreetMap
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.google.com/maps/place/Vancouver,+BC,+Canada/@49.2578182,-123.206304,12z"
+                        target="_blank"
+                        rel="noopener">
+                        Google Maps
+                    </a>
+                </li>
+
+                <li>
+                    <a
+                        href="https://www.facebook.com/groups/ridersph/"
+                        target="_blank"
+                        rel="noopener">
+                        Facebook
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#top">
+                        Back to top
+                    </a>
+                </li>
+
+            </ul>
+
+            <br>
+
+        </section>
+
+
+        <!-- =========================
+             TERMS AND CONDITIONS
+             ========================= -->
+        <section id="terms-info">
+
+            <h2>Terms &amp; Conditions</h2>
+
+            <details>
+
+                <summary>
+                    Read the terms
+                </summary>
+
+                <ol>
+
+                    <li>
+                        Passengers must provide correct booking information.
+                    </li>
+
+                    <li>
+                        Passengers must follow the driver's safety instructions.
+                    </li>
+
+                    <li>
+                        Passengers are responsible for their personal belongings.
+                    </li>
+
+                    <li>
+                        Bookings may be changed or cancelled when necessary.
+                    </li>
+
+                </ol>
+
+            </details>
+
+            <br>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+         ========================= -->
+    <footer>
+
+        <hr>
+
+        <p>
+            &copy; 2026 Riders Transportation Services.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
+```
